@@ -1,34 +1,72 @@
-# Cookie Info Overlay Extension
+# 🍪 Cookie Info Overlay Extension
 
-## Overview
-This extension injects an overlay into every webpage.  
-It shows:
-- Current page URL
-- Domain
-- HTTPS status
-- A button to request cookie access (runtime permission)
 
-Once permission is granted:
-- Displays cookies for the current domain
-- Updates cookie list in real time when cookies change
-- Provides options to revoke cookie access or clear cookies
+## 📌 Overview
+This Chrome Extension injects an overlay into every webpage to manage and display cookie information.  
 
-## Permissions
-- "activeTab": To interact with the current tab.
-- "scripting": For injecting content scripts.
-- "storage": For storing UI state.
-- "cookies": **Requested at runtime only**, not in the manifest.
+**Features include:**
+- 🌐 Shows current page URL and domain  
+- 🔒 Displays HTTPS status  
+- 🍪 Button to request cookie access at runtime  
+- ✅ Once permission is granted:  
+  - Displays cookies for the current domain  
+  - Updates cookie list in real-time when cookies change  
+  - Options to **revoke cookie access** or **clear cookies**
 
-## Communication
-- Content script → creates overlay, sends requests.
-- Background script → handles cookies, permissions, and events.
-- Messaging: chrome.runtime.sendMessage and chrome.runtime.onMessage.
+---
 
-## Security
-- Cookie data never exposed to webpage JS.
-- Handled only inside the extension context.
-- Runtime permission ensures least-privilege model.
+## 🛡️ Permissions
+- `"activeTab"` → Interact with the current tab  
+- `"scripting"` → Inject content scripts  
+- `"storage"` → Store UI state  
+- `"cookies"` → Requested at runtime **only**, not in the manifest  
 
-## Bonus Features
-- Revoke cookie access for the current domain.
-- Clear all cookies for the current domain.# CookieAccessManager_Extension
+---
+
+## 🔄 Communication
+- **Content script** → creates overlay, sends requests  
+- **Background script** → handles cookies, permissions, and events  
+- **Messaging** → `chrome.runtime.sendMessage` & `chrome.runtime.onMessage`
+
+---
+
+## 🔐 Security
+- Cookie data **never exposed to webpage JS**  
+- Handled entirely inside the extension context  
+- Runtime permissions ensure a **least-privilege model**
+
+---
+
+## 🎁 Bonus Features
+- 🚫 Revoke cookie access for the current domain  
+- 🧹 Clear all cookies for the current domain  
+
+---
+
+## 🖼️ Screenshot
+![Extension Screenshot](icons/screenshot1.png)  
+![Extension Screenshot](icons/screenshot2.png) 
+
+---
+
+## 📂 Folder Structure
+
+| Folder / File   | Description                    |
+| --------------- | ------------------------------ |
+| `background/`   | Background scripts             |
+| `content/`      | Content scripts                |
+| `icons/`        | Extension icons                |
+| `popup/`        | Popup HTML, CSS, and JS files  |
+| `ui/`           | Additional UI components       |
+| `manifest.json` | Chrome extension manifest file |
+
+
+
+---
+
+## 🚀 Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/SubhashKumar8574/CookieAccessManager_Extension.git
+
+
