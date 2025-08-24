@@ -1,0 +1,90 @@
+/* Base Overlay */
+#cookie-overlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  border: 2px solid #6a0dad;
+  padding: 14px;
+  z-index: 999999;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(106, 13, 173, 0.3);
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+#overlay-box h3 {
+  margin-top: 0;
+  font-size: 16px;
+  padding-bottom: 6px;
+  color: #6a0dad;
+  border-bottom: 1px solid #ddd;
+}
+#cookie-btn, #revoke-btn, #clear-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background: #6a0dad;
+  color: #fff;
+  font-weight: 500;
+  transition: background 0.2s ease-in-out;
+}
+#cookie-btn:hover, #revoke-btn:hover, #clear-btn:hover {
+  background: #520a9e;
+}
+#cookie-btn:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+#cookie-list {
+  margin-top: 12px;
+  max-height: 150px;
+  overflow-y: auto;
+  font-size: 13px;
+  padding: 6px;
+  border-radius: 6px;
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  #cookie-overlay {
+    background: #1e1e2e;
+    color: #eee;
+    border-color: #bb86fc;
+    box-shadow: 0 4px 12px rgba(187, 134, 252, 0.3);
+  }
+  #overlay-box h3 {
+    color: #bb86fc;
+    border-bottom: 1px solid #333;
+  }
+  #cookie-list {
+    background: #2b2b3b;
+    border: 1px solid #444;
+  }
+  #cookie-btn, #revoke-btn, #clear-btn {
+    background: #bb86fc;
+    color: #111;
+  }
+  #cookie-btn:hover, #revoke-btn:hover, #clear-btn:hover {
+    background: #9a66e0;
+  }
+}
+#close-overlay {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff4d4d;   /* red */
+  cursor: pointer;
+}
+
+#close-overlay:hover {
+  color: #ff1a1a;   /* brighter red on hover */
+}
